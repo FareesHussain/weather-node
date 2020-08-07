@@ -5,6 +5,8 @@ const app = express()
 const geocode = require('./utils/geocodes')
 const forecast = require('./utils/forcast')
 
+const port = process.env.PORT || 3000
+
 //define paths for Express config
 const pathToPublic = path.join(__dirname,"../public")
 const pathToViews = path.join(__dirname,"../templates/views")
@@ -77,14 +79,16 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
-
-    //!to kill the port use "ps aux | grep node " command on terminal and 
-    //! kill it using the command "kill -9 <digit_code>"
-
-    //* to get ip address of localhost enter command "ip addr show"
-    //* in the result find the one with 192.168......
-    console.log('open https://localhost:3000')
+app.listen(port,()=>{
+    console.log('server is up on port' + port)
 })
+
+
+
+//!to kill the port use "ps aux | grep node " command on terminal and 
+//! kill it using the command "kill -9 <digit_code>"
+
+//* to get ip address of localhost enter command "ip addr show"
+//* in the result find the one with 192.168......
 
 
