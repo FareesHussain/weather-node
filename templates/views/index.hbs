@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="/img/weather.png">
+    <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Enter Location to get weather updates</p>
+        <form action="">
+            <input type="text" name="address" placeholder="location">
+            <button>Get Weather Details</button>
+        <p id="message-1" class="result"></p>
+        <p id="message-2" class="result"></p>
+        <p id="loading"></p>
+        </form>
+    </div>
+    {{>footer}}
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
