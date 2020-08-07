@@ -15,10 +15,11 @@ body{
 }
 
 input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
+    width: 50%;
+    padding: 15px 32px;
     margin: 8px 0;
     box-sizing: border-box;
+    margin-right: 30px;
 }
 button {
     background-color: #4CAF50; /* Green */

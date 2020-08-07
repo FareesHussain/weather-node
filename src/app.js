@@ -19,7 +19,7 @@ app.use(express.static(pathToPublic))
  
 app.get('',(req,res)=>{
     res.render('index',{
-        title: 'Weather App',
+        title: 'Weather',
         name: 'Farees Hussain'
     })
 })
