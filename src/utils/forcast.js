@@ -1,8 +1,6 @@
 const request =  require('request')
 
 const forcast = ({longitude:long,latitude:lat},callback)=> {
-    // const long = data.longitude
-    // const lat = data.latitude
     const url = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+long+"&units=metric&exclude=minutely&appid=2db8a078efbbd891b8ae26674e3623f5"
     request({ url : url , json: true} , (err,{body})=>{
         if(err){
