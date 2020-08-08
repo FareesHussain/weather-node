@@ -64,9 +64,16 @@ app.get('/weather', (req, res) => {
             }
 
             res.send({
+                message:forecastData.message,
                 temp: forecastData.temp,
                 weatherDesc: forecastData.weatherDesc,
-                address: req.query.address
+                address: req.query.address,
+                windspeed: forecastData.windspeed,
+                pressure: forecastData.pressure,
+                humidity: forecastData.humidity,
+                time: forecastData.currenttime,
+                sunrise: forecastData.sunrise,
+                sunset: forecastData.sunset
             })
         })
     })
